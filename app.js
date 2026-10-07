@@ -4,8 +4,7 @@
 //   mine/theirs hold both tabs in one array, main list first then taboo from N on
 
 // [stored value, label] in the order the buttons show up
-// 6 was "Don't care" for a bit, got pulled. don't reuse 6 for something else, links from
-// back then still have 6s in them and dec() turns those into unrated
+
 const R = [[1, "Favorite"], [2, "Like"], [3, "Interested"], [4, "Maybe"], [5, "No"]];
 const NAME = Object.fromEntries(R);
 const N = KINKS.length, T = TABOO.length;
