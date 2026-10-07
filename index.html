@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kink List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1>Kink <em>List</em></h1>
+      <p class="sub" id="sub"></p>
+    </div>
+    <div class="actions">
+      <button class="btn ghost" id="clear">Clear</button>
+      <button class="btn" id="share">Share</button>
+    </div>
+  </div>
+</header>
+
+<div class="banner" id="banner" hidden>
+  <div class="wrap">
+    <p id="bannerText"></p>
+    <div class="banner-btns">
+      <button class="btn" id="compare">Fill in mine &amp; compare</button>
+      <button class="btn ghost" id="own">Start my own list</button>
+    </div>
+  </div>
+</div>
+
+<div class="bar">
+  <div class="wrap">
+    <input type="search" id="q" placeholder="Search kinks..." autocomplete="off">
+
+    <div class="chips" id="chips"></div>
+    <nav class="az" id="az"></nav>
+  </div>
+</div>
+
+<main class="wrap" id="list"></main>
+<p class="wrap empty" id="empty" hidden>Nothing matches that.</p>
+
+<dialog id="dlg">
+
+  <form method="dialog">
+    <h2>Your link</h2>
+    <p class="muted">Anyone with this link can see your answers. Nothing is stored on a server, it's all in the link itself.</p>
+    <div class="linkrow">
+      <input id="link" readonly>
+      <button type="button" class="btn" id="copy">Copy</button>
+    </div>
+    <p class="muted small" id="copied">&nbsp;</p>
+    <button class="btn ghost">Close</button>
+  </form>
+</dialog>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
