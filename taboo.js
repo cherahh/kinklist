@@ -52,8 +52,8 @@ const TABOO = [
     "Needs explicit negotiation, waterproof covers, plenty of water to drink and agreed hygiene rules."],
 
   // second batch, from the "10 taboo kinks" article plus a few asked for by name. dupes skipped
-  ["DDlg and ageplay",
-    "Daddy Dom / little girl and other caregiver dynamics, one partner nurtures and sets rules while the other plays a younger headspace. Everyone involved is an adult, for a lot of littles it's comforting more than anything.",
+  ["DDlg / MDlb and ageplay",
+    "Daddy Dom / little girl, Mommy Dom / little boy and other caregiver dynamics, one partner nurtures and sets rules while the other plays a younger headspace. Everyone involved is an adult, for a lot of littles it's comforting more than anything.",
     "The little should be able to switch back to adult mode when needed. If that gets hard, take a step back and look at why."],
   ["Breeding and pregnancy kink",
     "Arousal around getting someone pregnant, being bred, or pregnant bodies themselves. Can be pure fantasy and dirty talk or tied to actually trying.",

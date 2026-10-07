@@ -3,13 +3,14 @@
 //   links are position based
 //   mine/theirs hold both tabs in one array, main list first then taboo from N on
 
-// [stored value, label] in the order the buttons show up. "Don't care" got added later
-// as 6, displayed before No, so links made before it existed still decode the same
-const R = [[1, "Favorite"], [2, "Like"], [3, "Interested"], [4, "Maybe"], [6, "Don't care"], [5, "No"]];
+// [stored value, label] in the order the buttons show up
+// 6 was "Don't care" for a bit, got pulled. don't reuse 6 for something else, links from
+// back then still have 6s in them and dec() turns those into unrated
+const R = [[1, "Favorite"], [2, "Like"], [3, "Interested"], [4, "Maybe"], [5, "No"]];
 const NAME = Object.fromEntries(R);
 const N = KINKS.length, T = TABOO.length;
-// stored as 1..6 so 0 is free for unrated
-// maybe doesn't count as "into it", two maybes isn't really a match. don't care isn't either
+// stored as 1..5 so 0 is free for unrated
+// maybe doesn't count as "into it", two maybes isn't really a match
 const into = v => v >= 1 && v <= 3;
 
 let mine = new Uint8Array(N + T), theirs = null;
@@ -52,9 +53,8 @@ function dec(str, len) {
       const p = i * 3 + b;
       if ((p >> 3) < bin.length && (bin.charCodeAt(p >> 3) >> (p & 7)) & 1) v |= 1 << b;
     }
-    // 7  never comes out of enc(), only out of a link that got mangled in a chat app
-    // 67
-    arr[i] = v <= 6 ? v : 0;
+    // 6 = old don't care links, 7 = a link that got mangled in a chat app, both end up unrated
+    arr[i] = v <= 5 ? v : 0;
   }
   return arr;
 }
@@ -211,7 +211,7 @@ function refilter() {
 
 function chips() {
   const src = mode === "view" ? theirs : mine;
-  const n = [0, 0, 0, 0, 0, 0, 0];
+  const n = [0, 0, 0, 0, 0, 0];
   let total = 0;
   const m = { both: 0, clash: 0, "": 0 };
   rows.forEach((r, i) => {

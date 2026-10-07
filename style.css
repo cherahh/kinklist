@@ -14,7 +14,6 @@
   --r3: #4cb8f5; /* interested */
   --r4: #f2b53a; /* maybe */
   --r5: #6f6670; /* no */
-  --r6: #7fa39b; /* don't care, greenish grey so it doesn't read as a second No */
 
   color-scheme: dark;
 }
@@ -133,7 +132,6 @@ h1 em { color: var(--accent2); }
 .rates button.r3.on, .badge.r3 { background: var(--r3); border-color: var(--r3); color: #04182a; }
 .rates button.r4.on, .badge.r4 { background: var(--r4); border-color: var(--r4); color: #241703; }
 .rates button.r5.on, .badge.r5 { background: var(--r5); border-color: var(--r5); color: #fff; }
-.rates button.r6.on, .badge.r6 { background: var(--r6); border-color: var(--r6); color: #0b1a17; }
 
 /* stripe on the left so you can scroll and see the shape of someone's list without reading */
 .row.v1 { box-shadow: inset 3px 0 var(--r1); }
@@ -141,7 +139,6 @@ h1 em { color: var(--accent2); }
 .row.v3 { box-shadow: inset 3px 0 var(--r3); }
 .row.v4 { box-shadow: inset 3px 0 var(--r4); }
 .row.v5 { box-shadow: inset 3px 0 var(--r5); }
-.row.v6 { box-shadow: inset 3px 0 var(--r6); }
 .row.match .nm { color: var(--r1); }
 
 .empty { color: var(--muted); padding-block: 40px; text-align: center; }
